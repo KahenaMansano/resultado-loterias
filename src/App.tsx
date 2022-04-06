@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
   const [pageCode, setPage] = useState<string | null>(null)
-  const [color, setColor] = useState<string | null>(null)
+  const [color, setColor] = useState<string | null>('#EFEFEF')
   const [name, setName] = useState<string | null>(null)
   const [results, setResults] = useState<object | null>(null)
   const [newDate, setNewDate] = useState<string | null>(null)
@@ -79,7 +79,7 @@ function App() {
   }, [results])
 
   return (
-    <div className="Page">
+    <div className="Page" style={{ backgroundColor: `${color}` }}>
       <select id="page" onChange={update} className="Input">
         <option defaultValue="">Selecione o concurso:</option>
         <option value="MEGA-SENA">MEGA-SENA</option>
@@ -92,22 +92,44 @@ function App() {
 
       {!loading ? (
         <div>
-          <img src="./Logo_Sena.png" />
-          <h1>{name}</h1>
+          <div className="GridWeb">
+            <div className="Concurso">
+              <div className="NameLogo">
+                <img
+                  src="https://i.postimg.cc/8c1nfjfM/Logo-Sena.png"
+                  alt="Logo mega-sena"
+                />
+                <h1 className="TxtLogo">{name}</h1>
+              </div>
 
-          <div>
-            {results.numeros.map(number => {
-              return <div key={number}>{number}</div>
-            })}
+              <div className="Info">
+                <h2 className="InfoTxt">Concurso</h2>
+                <p className="InfoIdDate">
+                  {results.id} - {newDate}
+                </p>
+              </div>
+            </div>
+
+            <div className="Numbers">
+              {results.numeros.map(number => {
+                return (
+                  <div key={number} className="Number">
+                    {number}
+                  </div>
+                )
+              })}
+            </div>
           </div>
 
-          <h2>Concurso</h2>
-          <p>
-            {results.id} - {newDate}
-          </p>
+          <div className="Footer">
+            <p>
+              Este sorteio é meramente ilustrativo e não possui nenhuma ligação
+              com a CAIXA.
+            </p>
+          </div>
         </div>
       ) : (
-        <div class="lds-default">
+        <div className="lds-default">
           <div></div>
           <div></div>
           <div></div>

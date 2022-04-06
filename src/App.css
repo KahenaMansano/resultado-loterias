@@ -9,7 +9,7 @@
   margin: 0;
   height: 100vh;
   width: 100vw;
-  background-color: #EFEFEF;
+  object-fit: contain ;
 }
 
 
@@ -18,15 +18,8 @@
   width: 215.90px;
   border-style: none;
   border-radius: 10px;
-  position: absolute;
-  left: 6%;
-  top: 8.52%;
-
-  
-
+  cursor: pointer;
 }
-
-
 
 .Input, option {
   font-family: Montserrat;
@@ -39,14 +32,207 @@
   
 }
 
+.Concurso {
+  display: flex;
+  flex-direction: column;
+}
+
+.NameLogo {
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+}
+
+.TxtLogo {
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+
+.Info {
+  color: #FFFFFF;
+  font-family: Montserrat;
+}
+
+.InfoTxt{
+  
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.InfoIdDate {
+ 
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.Numbers {
+  color: 
+  #333333;
+  font-weight: 700;
+  font-family: Montserrat;
+}
+
+.Number {
+  background-color: #FFFFFF;
+  border-radius: 50%;
+}
+
+.Footer {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Montserrat;
+}
+
+@media(min-width:525px) {
+  .Page{
+      background-image: url('https://i.postimg.cc/5208qV6T/Design-sem-nome-10-removebg-preview.png');
+      background-repeat:no-repeat;
+      background-size: cover;
+  }
+
+  .Input { 
+    position: absolute;
+  left: 3%;
+  top: 8.52%;
+  }
+
+  .GridWeb {
+    display: flex;
+    justify-content: space-between;
+    max-height:90vh;
+    
+  }
+
+  .Concurso{
+    max-width: 45vw;
+    margin-top: 30%;
+  }
+
+  .NameLogo {
+    margin-left: 5%;
+  }
+
+  .TxtLogo {
+    margin-left: 22px;
+  }
+
+  .Info {
+    margin-left: 5%;
+    padding-top: 60%;
+  }
+
+  .Numbers {
+    font-size: 27px;
+    margin-top: 20%;
+    margin-bottom: 30%;
+    justify-self: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 50vw;
+    max-height: 50vh;
+    gap: 1.3rem;
+  }
+
+  .Number {
+    padding: 1.5rem;
+  }
+  .Footer{
+    display: flex;
+    text-align: center;
+    margin-left: 50vw;
+    max-width: 40vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+  }
+ 
+}
+
+@media(max-width:525px) {
+  .Page{
+      background-image: url('https://i.postimg.cc/nhGczjFt/Design-sem-nome-14-depositphotos-bgremover.png');
+      background-repeat:no-repeat;
+      background-position:center;
+      background-size:cover;
+      display: flex;
+    flex-direction: column;
+    align-items: center;  
+  }
+  .Input {
+   margin-top: 60px;
+   margin-bottom: 40px;
+   position: relative;
+  }
+
+  .NameLogo {
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;  
+  }
+
+  .NameLogo, img {
+    margin: 5px;
+  }
+
+  .TxtLogo {
+    margin-top: 5px;
+  }
+
+  .Info{
+    text-align: center;
+    
+  }
+
+  .InfoTxt {
+    margin: 0px;
+  }
+
+  .InfoIdDate{
+    margin: 0px;
+  }
+
+  .Number {
+    padding: 1rem;
+    justify-self: center;
+  }
+
+  .Numbers {
+    font-size: 16px;
+    margin-top: 70px;
+   margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 85vw;
+    max-height: 40vh;
+    gap: 1.3rem;
+  }
+
+  .Footer {
+    position:relative;
+    width: 85vw;
+    text-align: center;
+    
+  }
+
+  .lds-default {
+    margin: auto;
+  }
+
+}
+
 .lds-default {
   display: inline-block;
   position: relative;
-  left: 50%;
-  top: 50%;
   width: 80px;
   height: 80px;
 }
+
 .lds-default div {
   position: absolute;
   width: 6px;

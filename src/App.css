@@ -106,11 +106,13 @@
   }
 
   .Concurso{
-    max-width: 45vw;
-    margin-top: 30%;
+    width: 45vw;
+    
+    
   }
 
   .NameLogo {
+    margin-top: 40vh;
     margin-left: 5%;
   }
 
@@ -120,12 +122,13 @@
 
   .Info {
     margin-left: 5%;
-    padding-top: 60%;
+    margin-top: 35vh;
   }
 
   .Numbers {
     font-size: 27px;
-    margin-top: 20%;
+    margin-top: 35vh;
+    margin-right: 30px;
     margin-bottom: 30%;
     justify-self: flex-end;
     display: flex;
@@ -147,6 +150,13 @@
     flex-wrap: wrap;
     justify-content: center;
     align-self: center;
+  }
+
+  .lds-default {
+    margin-top: 50vh;
+    margin-left: 50vw;
+    display: inline-block;
+    position: relative;
   }
  
 }
@@ -202,7 +212,7 @@
   .Numbers {
     font-size: 16px;
     margin-top: 70px;
-   margin-bottom: 30px;
+   /* margin-bottom: 30px; */
     margin-right: auto;
     margin-left: auto;
     display: flex;
@@ -217,18 +227,19 @@
     position:relative;
     width: 85vw;
     text-align: center;
+    margin-top: 10vh;
     
   }
 
   .lds-default {
-    margin: auto;
+    margin: 100% auto;
+    display: inline-block;
+    position: relative;
   }
 
 }
 
 .lds-default {
-  display: inline-block;
-  position: relative;
   width: 80px;
   height: 80px;
 }

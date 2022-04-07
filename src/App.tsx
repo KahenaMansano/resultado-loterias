@@ -3,11 +3,17 @@ import axios from 'axios'
 import moment from 'moment'
 import './App.css'
 
+interface RequestResponse {
+  id: string
+  data: string
+  numeros: Array<string>
+}
+
 function App() {
   const [pageCode, setPage] = useState<string | null>(null)
   const [color, setColor] = useState<string | null>('#EFEFEF')
   const [name, setName] = useState<string | null>(null)
-  const [results, setResults] = useState<object | null>(null)
+  const [results, setResults] = useState<RequestResponse | null>(null)
   const [newDate, setNewDate] = useState<string | null>(null)
   const [loading, setLoading] = useState(true)
 
@@ -68,8 +74,8 @@ function App() {
   }, [pageCode])
 
   useEffect(() => {
-    if (!results) return
     function isoFormatDMY() {
+      if (!results) return
       let date = results.data
       let dateRange = moment.utc(date).format('YYYY-MM-DD')
       setNewDate(dateRange)
@@ -90,7 +96,7 @@ function App() {
         <option value="DIA DE SORTE">DIA DE SORTE</option>
       </select>
 
-      {!loading ? (
+      {!loading && results ? (
         <div>
           <div className="GridWeb">
             <div className="Concurso">
@@ -129,19 +135,21 @@ function App() {
           </div>
         </div>
       ) : (
-        <div className="lds-default">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+        <div className="loadingWeb">
+          <div className="lds-default">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
       )}
     </div>

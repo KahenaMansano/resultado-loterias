@@ -8,7 +8,7 @@ O objetivo é construir uma **aplicação web front-end** que mostre os **Result
 
 <br>
 
-### Recursos
+## Recursos
 
 - Layout: https://www.figma.com/file/H2qrYBCFMf4didYmxRwTxP/Brainn-Frontend-Challenge
 - API: https://brainn-api-loterias.herokuapp.com

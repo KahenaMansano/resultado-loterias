@@ -18,11 +18,11 @@ O objetivo é construir uma **aplicação web front-end** que mostre os **Result
 
 ## Funcionalidades concluídas
 
-- [x] A aplicação terá que suportar **6 sorteios**: `Mega-sena`, `Quina`, `Lotofácil`, `Lotomania`, `Timemania` e `Dia de sorte`
+- [x] A aplicação suporta **6 sorteios**: `Mega-sena`, `Quina`, `Lotofácil`, `Lotomania`, `Timemania` e `Dia de sorte`
 - [x] Todos esses sorteios estarão em um combo-box/select
-- [x] Ao mudar esse combo-box, terá que mudar o **tema do sorteio**, **número do sorteio**, **data do sorteio** e **números sorteados**
-- [x] A aplicação terá que ser responsiva, pelo menos para celulares, conforme layout
-- [x] O consumo da API pode ser feito via Axios
+- [x] Ao mudar esse combo-box, muda o **tema do sorteio**, **número do sorteio**, **data do sorteio** e **números sorteados**
+- [x] A aplicação é responsiva, conforme layout
+- [x] O consumo da API via Axios
 
 <br>
 

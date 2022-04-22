@@ -128,7 +128,7 @@
   .Numbers {
     font-size: 27px;
     margin-top: 35vh;
-    margin-right: 30px;
+    margin-right: 120px;
     margin-bottom: 30%;
     justify-self: flex-end;
     display: flex;
@@ -205,14 +205,13 @@
   }
 
   .Number {
-    padding: 1rem;
+    padding: 0.5rem;
     justify-self: center;
   }
 
   .Numbers {
-    font-size: 16px;
-    margin-top: 70px;
-   /* margin-bottom: 30px; */
+    font-size: 18px;
+    margin-top: 80px;
     margin-right: auto;
     margin-left: auto;
     display: flex;

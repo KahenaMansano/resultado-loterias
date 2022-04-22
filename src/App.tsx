@@ -45,27 +45,21 @@ function App() {
   if (name === 'DIA DE SORTE' && pageCode !== '440') {
     setColor('#BFAF83')
     setPage('440')
-    console.log('setou cor e código da página')
   }
 
   function update(e: React.ChangeEvent<HTMLSelectElement>) {
     const select = e.target.value
     setName(select)
-    console.log(select, 'setou no nome')
   }
 
   useEffect(() => {
     if (!name) return
-
-    console.log('Entrou no Request')
-
     async function searchData() {
       const request = await axios.get(
         `https://brainn-api-loterias.herokuapp.com/api/v1/concursos/${pageCode}`
       )
       setResults(request.data)
       setLoading(false)
-      console.log(request.data, 'Request feito')
 
       return request
     }
@@ -77,7 +71,7 @@ function App() {
     function isoFormatDMY() {
       if (!results) return
       let date = results.data
-      let dateRange = moment.utc(date).format('YYYY-MM-DD')
+      let dateRange = moment.utc(date).format('DD-MM-YYYY')
       setNewDate(dateRange)
     }
 

@@ -36,4 +36,4 @@ Projeto construido com:
 - **CSS**
 - **Axios**
 
-<p>Quer ver o resultado? <a href="https://results-loteria.surge.sh/" target="_blank">Clique aqui</a>.
+<p>Quer ver o resultado? <a href="print-results.surge.sh" target="_blank">Clique aqui</a>.
